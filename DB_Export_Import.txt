@@ -1,1 +1,16 @@
+FULL DATABASE EXPORT STEPS:
+
+1. create a directory for export
+
+SQL> create directory EXPDIR as '/export/home/oracle/EXPDIR';
+
+Directory created.
+
+2. Run expdp with full=y
+
+expdp dumpfile=FULLDB_SRCDB_%U.dmp logfile=FULLDB_SRCDB.log parallel=8 full=Y DIRECTORY=EXPDIR
+
+SQL> create or replace directory EXPDIR as '/export/home/oracle/EXPDIR';
+
+
 
