@@ -8,7 +8,7 @@ Directory created.
 
 2. Run expdp with full=y
 
-expdp dumpfile=FULLDB_SRCDB_%U.dmp logfile=FULLDB_SRCDB.log parallel=8 full=Y DIRECTORY=EXPDIR
+expdp system/manager@<DBSID> dumpfile=FULLDB_SRCDB_%U.dmp logfile=FULLDB_SRCDB.log parallel=8 full=Y DIRECTORY=EXPDIR
 
 3. Import specific schemas from data dump
 
